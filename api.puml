@@ -1,0 +1,31 @@
+@startuml
+
+class Swiper(web) {
+  + seamless: Boolean = true - 是否无缝 (done)
+  + loop: Boolean = true - 是否循环 (done)
+
+  + swiperPrev(): void - 前一个滑块 (done)
+  + swiperNext(): void - 后一个滑块 (done)
+  + swiperTo(Number: index) - 滚动到某个滑块 (done)
+
+  + vertical: Boolean = false - 垂直, 默认水平 (done)
+  + autoPlay: Boolean = true - 自动滚动 (done)
+  + initialIndex: Number = 0 - 初始化显示的滑块(done)
+  + moveDirection: Nunber = 1 - 滑动方向 >0 正向 <=0反向 (done)
+  + activeDuration: Number = 1000 - 显示时间, 以ms为单位 (done)
+
+  + moveDuration: Number = 100 - 滑动持续的时间, 以ms为单位 (done)
+
+  + indicator: Boolean|ReactElement = false - 指示器 (done)
+
+  + activedSwiperChangeStart (done)
+  + activedSwiperChangeEnd(Number: index) - 滑块改变后的回调 (todo)
+
+  + mouseable: Boolean = true - 鼠标控制滚动 (TODO)
+}
+
+class Swiper-Item(web) {
+  + click(Number: index) - 点击的是那个滑块 TODO(待定，可以直接绑定到元素上)
+}
+
+@enduml
